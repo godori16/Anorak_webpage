@@ -67,10 +67,29 @@
             <h3>{{ post.title }}</h2>
             <p>{{ post.body }}</p>
           </div>
+          <div class="row">
+            <div class="col">
+              <a class="btn btn-outline-primary float-right" href="{% url 'blog_edit' post.pk %}">+ Edit Post</a>
+              <a class="btn btn-outline-danger float-right mr-2" href="{% url 'blog_delete' post.pk %}">+ Delete Post</a>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col">
+              <h4>Comments</h4>
+              <ul>
+              {% for comment in post.comments.all %}
+                <li>{{ comment.comment }} ({{ comment.author }})</li>
+              {% endfor %}
+            </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  
 
 </article>
 
