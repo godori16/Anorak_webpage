@@ -69,8 +69,9 @@
           </div>
           <div class="row">
             <div class="col">
-              <a class="btn btn-outline-primary float-right" href="{% url 'blog_edit' post.pk %}">+ Edit Post</a>
-              <a class="btn btn-outline-danger float-right mr-2" href="{% url 'blog_delete' post.pk %}">+ Delete Post</a>
+              <a class="btn btn-primary float-right btn-sm" href="{% url 'blog' %}">Blog List</a>
+              <a class="btn btn-outline-primary float-right btn-sm mr-2" href="{% url 'blog_edit' post.pk %}">+ Edit Post</a>
+              <a class="btn btn-outline-danger float-right btn-sm mr-2" href="{% url 'blog_delete' post.pk %}">+ Delete Post</a>
             </div>
           </div>
           <hr>

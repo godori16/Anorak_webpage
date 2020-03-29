@@ -27,8 +27,12 @@
           </div>
 
           <!-- Image -->
-          <img class="card-img-top" src="../{{ post.thumbnail_image.url }}" alt="...">
-
+          {% if post.thumbnail_image %}
+            <img class="card-img-top" src="{{ post.thumbnail_image.url }}" alt="...">
+          {% else %}
+            <img class="card-img-top" src="../static/imgs/nature1.jpg" alt="...">
+          {% endif %}
+          
           <!-- Body -->
           <div class="card-body px-0">
 

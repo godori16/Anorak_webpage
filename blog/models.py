@@ -9,7 +9,7 @@ class Post(models.Model):
         'users.CustomUser',
         on_delete=models.CASCADE,
     )
-    thumbnail_image = models.ImageField(upload_to='static/uploads/blog', default='static/imgs/blog/nature1.jpg')
+    thumbnail_image = models.ImageField(upload_to='blog_thumbnails/', blank=True, default='default.jpg')
     thumbnail_text = models.TextField()
     body = models.TextField()
 
